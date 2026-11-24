@@ -6,15 +6,26 @@ st.set_page_config(page_title="LUNARIA｜AI占いサロン", page_icon="🌙", l
 
 st.markdown("""
 <style>
-.stApp {background: linear-gradient(135deg,#171329 0%,#241936 55%,#34213e 100%); color:#f6e9d4;}
+/* 全体：濃い背景に明るい文字 */
+.stApp {background: linear-gradient(135deg,#171329 0%,#241936 55%,#34213e 100%); color:#fff7eb;}
+.stApp, .stApp p, .stApp label, .stApp .stMarkdown, .stApp [data-testid="stMarkdownContainer"] {color:#fff7eb;}
+.stApp h1, .stApp h2, .stApp h3, .stApp h4 {color:#f3d9ad;}
+.stApp [data-testid="stCaptionContainer"], .stApp small {color:#e4d6ec !important;}
+/* 入力欄は明るい面＋濃い文字にして視認性を確保 */
+.stApp input, .stApp textarea, .stApp [data-baseweb="select"] > div {background-color:#fffaf4 !important; color:#292033 !important; -webkit-text-fill-color:#292033 !important;}
+.stApp input::placeholder, .stApp textarea::placeholder {color:#756b7b !important; -webkit-text-fill-color:#756b7b !important; opacity:1;}
+.stApp [data-baseweb="select"] *, .stApp [role="radiogroup"] label, .stApp [role="checkbox"] label {color:#fff7eb !important;}
+.stApp [data-baseweb="popover"] *, .stApp [role="listbox"] * {color:#292033 !important;}
+.stApp button[kind="primary"] {color:#241936 !important;}
 section[data-testid="stSidebar"] {background:#f7f5f2;}
 section[data-testid="stSidebar"] * {color:#30263b !important;}
-.hero {text-align:center; padding:28px 12px 20px; border:1px solid #79658a; border-radius:22px; background:rgba(255,255,255,.035); margin-bottom:22px;}
-.hero h1 {color:#e7c99c; letter-spacing:.12em; font-size:2.5rem; margin-bottom:4px;}
-.hero p {color:#eadcc9; margin:0;}
-.panel {border:1px solid #665274; border-radius:16px; padding:20px; background:rgba(255,255,255,.045); margin:12px 0;}
-.result {border-left:3px solid #d9b77e; padding:10px 16px; margin:12px 0; background:rgba(255,255,255,.04); border-radius:6px;}
-.small {color:#c9b8d2; font-size:.9rem;}
+.hero {text-align:center; padding:28px 12px 20px; border:1px solid #a18ab4; border-radius:22px; background:rgba(255,255,255,.09); margin-bottom:22px;}
+.hero h1 {color:#f3d9ad; letter-spacing:.12em; font-size:2.5rem; margin-bottom:4px;}
+.hero p {color:#fff0dc; margin:0;}
+.panel {border:1px solid #8d75a0; border-radius:16px; padding:20px; background:rgba(255,255,255,.09); margin:12px 0;}
+.result {border-left:3px solid #e4c58f; padding:10px 16px; margin:12px 0; background:rgba(255,255,255,.10); border-radius:6px; color:#fff7eb;}
+.result strong {color:#f3d9ad;}
+.small {color:#f0e4f5 !important; font-size:.9rem;}
 </style>
 """, unsafe_allow_html=True)
 
